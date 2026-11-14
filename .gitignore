@@ -1,0 +1,30 @@
+# Java compiled files
+*.class
+
+# Maven build files
+target/
+**/target/
+
+# Java libraries
+*.jar
+
+# VS Code
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+.env.*
+
+# IDE files
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup ZIP files
+*.zip

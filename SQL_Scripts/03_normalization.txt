@@ -1,0 +1,40 @@
+WATER SUPPLY MANAGEMENT SYSTEM
+DATABASE NORMALIZATION DOCUMENTATION
+
+1. FIRST NORMAL FORM (1NF)
+- Each table contains a primary key.
+- Each column stores a single value.
+- Repeating groups are avoided.
+- All five tables store data in a structured format.
+
+2. SECOND NORMAL FORM (2NF)
+- The database satisfies 1NF.
+- Each table uses a single-column primary key.
+- Non-key attributes depend on the whole primary key.
+- Partial dependency is avoided.
+
+3. THIRD NORMAL FORM (3NF)
+- The database satisfies 2NF.
+- Non-key attributes depend only on the primary key.
+- Consumer details are stored separately in the consumer table.
+- Connection details are stored in water_connection.
+- Meter readings are stored in meter_reading.
+- Bill details are stored in water_bill.
+- Payment details are stored in payment.
+- Foreign keys connect related tables.
+
+TABLE RELATIONSHIPS
+consumer -> water_connection
+water_connection -> meter_reading
+meter_reading -> water_bill
+water_bill -> payment
+
+CONCLUSION
+The database is organized into five related tables.
+Primary keys and foreign keys maintain relationships
+and help reduce unnecessary data duplication.
+
+NOTE
+This document describes the intended normalization design.
+A complete functional-dependency analysis is required
+to formally verify 1NF, 2NF and 3NF.
